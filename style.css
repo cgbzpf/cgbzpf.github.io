@@ -1,103 +1,38 @@
-.Container, footer{
-  width: 650px;
-  margin-right: auto;
-  margin-left: auto;
-  margin-top: 50px;
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background: black;
+    
 }
 
-span{
-  font-weight: bold;
+.background {
+    max-width: 100%;
+    max-height: 200vh;
+    margin: auto;
+    position: relative;
 }
 
-h1, h2, h4{
-  font-family: 'Merriweather', serif;
-  font-size: 15px;
+.linkek {
+    color: white;
+    display: block;
+    position: absolute;
+    display: flex;
+    bottom: 66px;
+    left: 66px;    
+    font-size: 5vw;
+    font-size: 5vh;
+    text-decoration: none;
 }
 
-h1{
-  text-transform: uppercase;
-  margin-top: 50px;
-  margin-bottom: 50px;
-  font-size: 25px;
-  letter-spacing: 3px;
+.buttons {
+    position: absolute;
+    display: flex;
+    top: 55px;
 }
 
-h2{
-  font-size: 20px;
-  margin-bottom:5px;
-}
-
-h4{
-  font-style: italic;
-  margin-top: 0;
-}
-
-.intro{
-  position:absolute;
-  bottom:50px;
-  left:202px;
-  font-size: 35px;
-  text-align: left;
-}
-
-.intro2{
-  position:absolute;
-  bottom:-35px;
-  left:200px;
-  font-size: 60px;
-  text-align: left;
-}
-
-img{
-  width: 1200px;
-}
-
-header{
-  display: flex;
-  position: relative;
-  width: 1200px;
-  margin: auto;
-}
-
-.intro, .intro2, blockquote{
-  font-family: 'Abril Fatface', cursive;
-  color: #222222;
-}
-
-p, li{
-  font-family: 'Josefin Sans', sans-serif;
-  color: #222222;
-}
-
-li, p{
-  line-height: 1.6;
-  font-size: 16px;
-}
-
-blockquote::before {
-  content: '“';
-  font-size: 80px;
-  background: #53565A;
-  position:absolute;
-  top:0px;
-  left:0px;
-}
-
-blockquote{
-  background: #53565A;
-  color: white;
-  font-size: 50px;
-  padding: 40px;
-  width: 700px;
-  margin-left: -50px;
-  position:relative;
-}
-
-footer {
-  border-top: 5px solid black;
-  padding-bottom: 10px;
-}
-
-ul{
-  list-style-type: disc;
+.input {
+    position: absolute;
+    display: flex;
+    top: 44px;
 }

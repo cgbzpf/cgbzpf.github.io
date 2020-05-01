@@ -1,0 +1,37 @@
+`<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>    
+<script src="scripts.js"></script>
+</head>
+<body>
+   <h1>Uj Internetes Zsido Adatbazis</h1>
+   <h2>(kozossegi projekt)</h2>
+   <h3>Zsidok listaja</h3><p>(0 db zsido)</p>
+   <ul></ul>
+   <input id='zsinput' type="text"> 
+   <button>Zsido hozzaadasa</button>
+
+<script>
+
+$('button').click(() => {
+  $('ul').append(`<li>${$('input').val()}</li>`);
+  $('input').val('');
+});
+
+let counter = 0;
+
+$('button').click(() => {
+  counter = counter + 1;
+  $('p').text("(" + counter + " db zsido)");
+});
+
+</script>
+
+
+</body>
+</html>
