@@ -1,44 +1,36 @@
-<!DOCTYPE html>
+`<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" type="text/css" href="style.css" media="screen"/>
-  <title>Main Page</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>    
+<script src="scripts.js"></script>
 </head>
 <body>
-  <main>
-  <div class="background">
-  <img class="background" src="background.jpg">
-    <div class="linkek">
-     <a href="cv/index.html">This is a link to the CV</a>
-     <a href="todo/index.html">Uj Internetes Zsido Adatbazis</a>
-    </div>
-    <div class="buttons">
-      <button id="b1">Don't fuckin touch this</button>
-      <button id="b2">I'll piss on your grave</button>
-      <button id="b3">Enough already</button>
-    </div>
-    <div class='inputfield'>
-      <input id="colorInput" type="text" value="blue">Input color
-    </div>
-  </div>
-  </main>
-<script type="text/javascript" src="script.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <h1>Counter</h1>
+    <h2>0</h2>
+    <button id="increase">Increase</button>
+    <button id="decrease">Decrease</button>
+
 <script>
-  $('#b1').click(() => {
-    console.log('You bloody wanker!')
-  });
-  $('#b2').click(() => {
-    $('#b1').text('Yer an asshole')
-  });
-  $('#b3').click(() => {
-    var $val = $('#colorInput').val(); 
-    $('button').css('background-color', $val)
-  });
+let counter = 0;
+
+$('#increase').click(() => {
+  counter = counter + 1;
+  $('h2').text(counter);
+});
+
+$('#decrease').click(() => {
+    counter = counter -1;
+    $('h2').text(counter);
+});
+
+
 
 
 </script>
+
+
 </body>
 </html>
