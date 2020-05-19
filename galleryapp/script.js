@@ -48,26 +48,32 @@ let loadPhoto = (photoNumber) => {
     $('#photo').attr('src', imagesData[photoNumber].photo);
     $('#title').text(imagesData[photoNumber].title);
     $('#description').text(imagesData[photoNumber].description);
-  }
+    $('.thumbnail').css('border', 'ridge');
+
+  };
   
   loadPhoto(currentPhoto);
 
   $('#leftarrow.arrowimg').click(() => {
     currentPhoto--;
     loadPhoto(currentPhoto);
-  })
+  });
   
   $('#rightarrow.arrowimg').click(() => {
     currentPhoto++;
     loadPhoto(currentPhoto);
-  })
+  });
 
   imagesData.forEach((thumbnail, index) => {
-    $('#thumbnail-container').append(`<img class="thumbnail1" id="thumb${index}" data-index="${index}" src="${thumbnail.photo}">`);
+    $('#thumbnail-container')
+    .append(`<img class="thumbnail" id="thumb${index}" data-index="${index}" src="${thumbnail.photo}">`);
   });
     $('.thumbnail').click((event) => {
     let indexClicked = $(event.target).attr('data-index');
     $('#picture').attr('src', data[indexClicked].photo);
     $('#title').text(data[indexClicked].title);
     $('#text').text(data[indexClicked].text);
+   
 });
+
+$(`thumb${index}`).css("border", "5px solid blue");
