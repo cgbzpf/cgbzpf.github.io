@@ -63,5 +63,11 @@ let loadPhoto = (photoNumber) => {
   })
 
   imagesData.forEach((thumbnail, index) => {
-    $('#thumbnail-container').append(`<div class="thumbnail1" data-index="${index}">${thumbnail} src="${thumbnail.photo})</div>`);
+    $('#thumbnail-container').append(`<img class="thumbnail1" id="thumb${index}" data-index="${index}" src="${thumbnail.photo}">`);
   });
+    $('.thumbnail').click((event) => {
+    let indexClicked = $(event.target).attr('data-index');
+    $('#picture').attr('src', data[indexClicked].photo);
+    $('#title').text(data[indexClicked].title);
+    $('#text').text(data[indexClicked].text);
+});

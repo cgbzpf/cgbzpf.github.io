@@ -79,13 +79,11 @@ h2 {
     max-width: 800px;
     min-width: 800px;
     width: auto;
-    height: 80px;
-    border: solid blue;
+    height: 100px;
     position: absolute;
-    align-items: center;
-    bottom: 0%;
+    bottom: -5%;
     left: 25%;
-    justify-content: space-between;
+    justify-content: space-evenly;
     display: flex;
 }
 
@@ -94,11 +92,5 @@ h2 {
     height: 100%;
     border: solid black;
     display: row;
-}
 
-#thumbnail2{
-    width: 20%;
-    height: 100%;
-    border: solid purple;
-    display: row;
 }
