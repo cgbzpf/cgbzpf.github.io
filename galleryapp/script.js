@@ -63,5 +63,5 @@ let loadPhoto = (photoNumber) => {
   })
 
   imagesData.forEach((thumbnail, index) => {
-    $('#thumbnail-container').append(`<div class="thumbnail1" data-index="${index}">${currentPhoto} (data-index="${index}" src="${thumbnail.photo})</div>`);
+    $('#thumbnail-container').append(`<div class="thumbnail1" data-index="${index}">${thumbnail} src="${thumbnail.photo})</div>`);
   });
