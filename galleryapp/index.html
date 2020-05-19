@@ -1,0 +1,35 @@
+`<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fancy Gallery Viewer</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet">
+    <link rel="icon" href="cam.svg">
+</head>
+<body>
+    <div id="mainbox">
+        <div class="arrows" id="leftarrowbox">
+            <input type="image" src="arrow.svg" name="leftarrow" class="arrowimg" id="leftarrow"/>
+            
+        </div>
+        <div id="mainviewer">
+            <img id="photo">                
+            <div class="footer">
+                <h2 id="title"></h2>
+                <p id="description"></p>
+            </div> 
+        </div>
+        <div class="arrows" id="rightarrowbox">
+            <input type="image" src="arrow.svg" name="rightarrow" class="arrowimg" id="rightarrow"/>
+        </div> 
+    </div>
+    <div id="thumbnail-container">
+        <!-- <div class="thumbnail" id="thumbnail1"></div>
+        <div class="thumbnail" id="thumbnail2"></div> -->
+    </div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>    
+<script src="script.js"></script>
+</body>
+</html>
