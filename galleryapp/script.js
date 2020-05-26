@@ -55,14 +55,18 @@ let loadPhoto = (photoNumber) => {
   loadPhoto(currentPhoto);
 
   $('#leftarrow.arrowimg').click(() => {
+    if(currentPhoto > 0) {
     currentPhoto--;
     loadPhoto(currentPhoto);
-  });
+    console.log(currentPhoto);
+  }});
   
   $('#rightarrow.arrowimg').click(() => {
-    currentPhoto++;
-    loadPhoto(currentPhoto);
-  });
+    if(currentPhoto < 4) {
+      currentPhoto++;
+      loadPhoto(currentPhoto);
+      console.log(currentPhoto);
+  }});
 
   imagesData.forEach((thumbnail, index) => {
     $('#thumbnail-container')
@@ -70,10 +74,9 @@ let loadPhoto = (photoNumber) => {
   });
     $('.thumbnail').click((event) => {
     let indexClicked = $(event.target).attr('data-index');
-    $('#picture').attr('src', data[indexClicked].photo);
-    $('#title').text(data[indexClicked].title);
-    $('#text').text(data[indexClicked].text);
-   
+    $('#picture').attr('src', imagesdata[indexClicked].photo);
+    $('#title').text(imagesdata[indexClicked].title);
+    $('#text').text(imagesdata[indexClicked].text);
+    $(`thumb${index}`).css("border", "solid red");
 });
 
-$(`thumb${index}`).css("border", "5px solid blue");

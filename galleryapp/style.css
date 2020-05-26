@@ -19,6 +19,7 @@ body {
     top: 25%;
     left: 25%;
     border: 1px solid black;
+    box-shadow: 1px 0px 11px rgb(39, 39, 39);
 }
 
 #mainviewer {
